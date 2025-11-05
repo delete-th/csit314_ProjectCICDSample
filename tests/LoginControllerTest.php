@@ -1,13 +1,9 @@
 <?php
-// test2
 use PHPUnit\Framework\TestCase;
-use Src\controllers\LoginController;
-use Src\entities\UserAccount;
-use Src\entities\UserProfile;
 
-//require_once __DIR__ . '/../src/controllers/LoginController.php';
-//require_once __DIR__ . '/../src/entities/UserAccount.php';
-//require_once __DIR__ . '/../src/entities/UserProfile.php';
+require_once __DIR__ . '/../src/controllers/LoginController.php';
+require_once __DIR__ . '/../src/entities/UserAccount.php';
+require_once __DIR__ . '/../src/entities/UserProfile.php';
 
 class LoginControllerTest extends TestCase
 {
