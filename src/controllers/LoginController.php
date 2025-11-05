@@ -1,12 +1,8 @@
 <?php
-namespace Src\controllers;
-
-use Src\entities\UserAccount;
-use Src\entities\UserProfile;
 // controllers/LoginController.php
-// test change
-//require_once __DIR__ . '/../entities/UserAccount.php';
-//require_once __DIR__ . '/../entities/UserProfile.php';
+
+require_once __DIR__ . '/../entities/UserAccount.php';
+require_once __DIR__ . '/../entities/UserProfile.php';
 
 class LoginController {
     private $userProfileEntity;
