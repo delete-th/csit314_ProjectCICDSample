@@ -9,8 +9,8 @@ class LoginController {
 	private $userAccountEntity;
 
     public function __construct() {
-        $this->userProfileEntity = new UserProfile();
-		$this->userAccountEntity = new UserAccount();
+        $this->userAccountEntity = $userAccount ?? new UserAccount();
+		$this->userProfileEntity = $userProfile ?? new UserProfile();
     }
 
     public function loginUser($name, $password, $loginAs) {
