@@ -1,5 +1,4 @@
 <?php
-namespace Src\entities;
 // entities/UserAccount.php
 require_once __DIR__ . '/../config/DBConnection.php';
 
