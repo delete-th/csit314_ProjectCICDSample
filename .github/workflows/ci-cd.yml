@@ -1,0 +1,36 @@
+name: PHP CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mysqli
+
+      - name: Install Composer dependencies
+        run: composer install
+
+      - name: Run PHPUnit tests
+        run: ./vendor/bin/phpunit tests
+
+      - name: Simulate Deployment to Local XAMPP
+        if: success()
+        run: |
+          echo "✅ All tests passed successfully!"
+          echo "🚀 Ready to deploy to your local XAMPP server."
+          echo "To simulate deployment:"
+          echo "1️⃣ Go to your local folder: C:/xampp/htdocs/S4_testCD1"
+          echo "2️⃣ Run: git pull origin main"
+          echo "3️⃣ Refresh localhost/S4_testCD1 in your browser to see the latest build."
