@@ -8,7 +8,7 @@ class LoginController {
     private $userProfileEntity;
 	private $userAccountEntity;
 
-    public function __construct() {
+    public function __construct($userAccount = null, $userProfile = null) {
         $this->userAccountEntity = $userAccount ?? new UserAccount();
 		$this->userProfileEntity = $userProfile ?? new UserProfile();
     }
