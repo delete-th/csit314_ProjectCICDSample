@@ -1,5 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
+use Src\controllers\LoginController;
 
 require_once __DIR__ . '/../src/controllers/LoginController.php';
 require_once __DIR__ . '/../src/entities/UserAccount.php';
