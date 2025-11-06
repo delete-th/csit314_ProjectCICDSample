@@ -5,9 +5,9 @@ require_once __DIR__ . '/../entities/UserAccount.php';
 class ViewUserAccountController {
     private $userAccountEntity;
 
-    public function __construct() {
+    public function __construct($UserAccount = null) {
         // Controller creates its own entity
-        $this->userAccountEntity = new UserAccount();
+        $this->userAccountEntity = $UserAccount ?? new UserAccount();
     }
 
     public function GetUserAccounts() {
@@ -21,3 +21,4 @@ class ViewUserAccountController {
 
 }
 ?>
+
